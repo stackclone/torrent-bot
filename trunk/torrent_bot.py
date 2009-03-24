@@ -6,12 +6,15 @@ __date__      = "$Date: 2009/03/23 $"
 __license__   = "GPL2"
 
 
-#Torrent bot is a jython script that connects to the transmission (http://www.transmissionbt.com/) bit torrent client via RPC and lets users communicate with their transmission client via commands sent over the MSN network
+#Torrent bot is a jython script that connects to the transmission (http://www.transmissionbt.com/) 
+#bit torrent client via RPC and lets users communicate with their transmission client 
+#via commands sent over the MSN network
 
 #Makes use of:
-# the simplejson(http://code.google.com/p/simplejson/)
-# slightly modified version of: transmission client (http://lesion.noblogs.org/post/2008/09/12/python-binding-to-transmission-1.33-bittorrent-client-jsonrpc)
-# java messenger library (http://jml.blathersource.org/)
+# 1) the simplejson(http://code.google.com/p/simplejson/)
+# 2) slightly modified version of: transmission client 
+# (http://lesion.noblogs.org/post/2008/09/12/python-binding-to-transmission-1.33-bittorrent-client-jsonrpc)
+# 3) java messenger library (http://jml.blathersource.org/)
 
 import sys
 from time import sleep
