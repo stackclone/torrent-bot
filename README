@@ -1,4 +1,5 @@
-To run the torrent bot, first, make sure java is installed on your system, second, set the approriate variables in bot_config.py.  Then, execute the run.sh shell script.
+To run the torrent bot, first, make sure java is installed on your system, second, set the approriate variables in bot_config.py.  
+Then, execute the run.sh shell script.
 
 Currently, torrent bot needs to be run on the same machine as transmission daemon.
 
