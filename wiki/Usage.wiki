@@ -1,3 +1,11 @@
+Before you can use Torrent Bot, you must create or already have an MSN account to be used with the script.  Also, you must manually login as this account and accept yourself as a friend, if you already haven't done so.  This may be confusing so below is some steps to try to help clarify:
+
+ # Create an msn account for the bot. i.e my_bot@hotmail.com
+ # login to your main account and add the bot account (i.e my_bot@hotmail.com) as a buddy
+ # logout of your main account and login as the bot account
+ # Add your main account as a buddy
+ # login as your main account
+
 To launch Torrent Bot, execute the included run.sh script.  This will launch torrent bot in the foreground.  You can make use of the obvious unix tricks to get it to run as a background process.   Once running you can send it a variety of commands, detailed below:
 
  * overview --> Overview of torrent client current state 
@@ -5,5 +13,6 @@ To launch Torrent Bot, execute the included run.sh script.  This will launch tor
  * get torrent:<torrent name> --> Info on the specified torrent 
  * download torrent:<url of torrent file> --> Downloads the specified torrent file and starts downloading it 
  * delete torrent:<torrent name> --> Removes the torrent, but does not delete the data 
+ * the "help" command will send you the above information.
 
-the "help" command will send you the above information.
+To use the "download torrent" command, pass it the url of the .torrent file you wish to download.  Torrent Bot will download the file to your hard drive, and then pass it to your transmission client.
