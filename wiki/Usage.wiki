@@ -1,0 +1,9 @@
+To launch Torrent Bot, execute the included run.sh script.  This will launch torrent bot in the foreground.  You can make use of the obvious unix tricks to get it to run as a background process.   Once running you can send it a variety of commands, detailed below:
+
+ * overview --> Overview of torrent client current state 
+ * all torrents --> Info on all torrents currently being downloaded or seeded  
+ * get torrent:<torrent name> --> Info on the specified torrent 
+ * download torrent:<url of torrent file> --> Downloads the specified torrent file and starts downloading it 
+ * delete torrent:<torrent name> --> Removes the torrent, but does not delete the data 
+
+the "help" command will send you the above information.
