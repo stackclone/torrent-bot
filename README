@@ -1,0 +1,9 @@
+To run the torrent bot, first, make sure java is installed on your system, second, set the approriate variables in bot_config.py.  Then, execute the run.sh shell script.
+
+Currently, torrent bot needs to be run on the same machine as transmission daemon.
+
+To find out the supported commands send the bot a "help" message.  
+
+To download a torrent via torrent bot, use the download torrent command and pass it the url to the .torrent file on the tracker site.
+
+Currently tested against transmission 1.51, built from source.
