@@ -1,4 +1,4 @@
 #set these variables to make torrent bot work
-username="t_botinsky@hotmail.com"
-password="password"
+username=""
+password=""
 screenname="Torrent Bot"
