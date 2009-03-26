@@ -1,5 +1,7 @@
 
 
+
+
 __author__    = "Nathan Stehr (nstehr@gmail.com)"
 __version__   = "$Revision: 1.0 $"
 __date__      = "$Date: 2009/03/23 $"
@@ -77,21 +79,19 @@ class MSNEventHandler(MsnAdapter):
         if command == 'overview':
             results = client.sessionStats()
             arguments = results['arguments']
-            sessionStats = arguments['session-stats']
             
-            uploadSpeed = sessionStats['uploadSpeed']
+            uploadSpeed = arguments['uploadSpeed']
             uploadSpeed = float(uploadSpeed)/1000
             uploadSpeed = str(uploadSpeed) + " kb/s"
             
-            downloadSpeed = sessionStats['downloadSpeed']
+            downloadSpeed = arguments['downloadSpeed']
             downloadSpeed = float(downloadSpeed)/1000
             downloadSpeed = str(downloadSpeed) + " kb/s"
             
-            activeTorrents = str(sessionStats['activeTorrentCount'])
-            pausedTorrents = str(sessionStats['pausedTorrentCount'])
+            activeTorrents = str(arguments['activeTorrentCount'])
+            pausedTorrents = str(arguments['pausedTorrentCount'])
+            totalTorrents = str(arguments['torrentCount'])
             
-            totalTorrents = str(sessionStats['torrentCount'])
-        
             output = "Download Speed: "+downloadSpeed+"\n"
             output = output + "Upload Speed: "+uploadSpeed+"\n"
             output = output + "Number of Active Torrents: " + activeTorrents+"\n"
