@@ -1,4 +1,4 @@
-Before you can use Torrent Bot, you must create or already have an MSN account to be used with the script.  Once you've given Torrent Bot  an account, add that account to your buddy list, and Torrent Bot should automatically add you in return.   If you run into problems try manually logging in as this account and accept yourself as a friend, if you already haven't done so.  This may be confusing so below are some steps to try to help clarify:
+Before you can use Torrent Bot, you must create or already have an MSN account to be used with the script.  Once you've given Torrent Bot  an account, add that account to your buddy list, and Torrent Bot should automatically add you in return.   If you run into problems try manually logging in as this account and accept yourself as a friend, if you already haven't done so.  This may be confusing so below are some steps to try to help clarify, the previous mentioned troubleshooting steps:
 
  # Create an msn account for the bot. i.e my_bot@hotmail.com
  # login to your main account and add the bot account (i.e my_bot@hotmail.com) as a buddy
