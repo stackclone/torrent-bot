@@ -12,7 +12,10 @@ Currently tested against transmission 1.51, built from source.
 NOTE:
 
 Before you can use Torrent Bot, you must create or already have an MSN account to be used with the script. 
-Also, you must manually login as this account and accept yourself as a friend, if you already haven't done so. 
+
+If you add your bots email account to your buddy list, Torrent Bot should automatically add you in return.  If 
+you run into problems and this doesn't seem to work, try manually logging in 
+as the bot account and accept yourself as a friend. 
 This may be confusing so below is some steps to try to help clarify:
 
 Create an msn account for the bot. i.e my_bot@hotmail.com

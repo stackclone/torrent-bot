@@ -36,6 +36,8 @@ from net.sf.jml.event import MsnAdapter
 from net.sf.jml.message import MsnControlMessage
 from net.sf.jml.message import MsnDatacastMessage
 from net.sf.jml.message import MsnInstantMessage
+from net.sf.jml import MsnContact
+from net.sf.jml import Email
 import urllib
 from net.sf.jml import MsnFileTransfer
 import bot_config
@@ -66,6 +68,8 @@ class MSNEventHandler(MsnAdapter):
     def loginCompleted(self,messenger):
         messenger.getOwner().setDisplayName(bot_config.screenname)
  
+    def contactAddedMe(self,messenger,contact):
+        messenger.addFriend(contact.getEmail(),contact.getFriendlyName())
 
     #non overridden functions
     def sendMessage(self,message):
@@ -220,8 +224,9 @@ class MSNMessenger:
         print "Initializing...."
         listener = MSNEventHandler()
         messenger.addMessageListener(listener)
-        messenger.addFileTransferListener(listener)
+        #messenger.addFileTransferListener(listener)
         messenger.addMessengerListener(listener)
+        messenger.addContactListListener(listener)        
 
     def connect(self,email,password):
         messenger = MsnMessengerFactory.createMsnMessenger(email,password)
