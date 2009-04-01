@@ -1,4 +1,5 @@
 #set these variables to make torrent bot work
-username=""
-password=""
+username="t_botinsky@hotmail.com"
+password="password"
 screenname="Torrent Bot"
+transmission_url = 'http://freedom:9091/transmission/rpc'
