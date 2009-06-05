@@ -1,11 +1,13 @@
 import sys
 from time import sleep
 import os
+import urllib
 #setup the path, i.e add the 3rd party stuff I need
 current_path= os.getcwd()
 sys.path.append(os.path.join(current_path,'simplejson-1.9.2/simplejson'))
 sys.path.append(os.path.join(current_path,'python-transmission/python-transmission'))
 import bot_config
+import traceback
 
 from transmissionClient import TransmissionClient
 
@@ -143,14 +145,19 @@ class InputHandler:
         return output
     
     def saveFile(self,link):
-        webFile = urllib.urlopen(link)
-        localFile = open(link.split('/')[-1], 'wb')
-        localFile.write(webFile.read())
-        webFile.close()
-        localFile.close()
-        path = os.getcwd()+os.sep+localFile.name
-        return path
-        
+        try:
+            webFile = urllib.urlopen(link)
+            localFile = open(link.split('/')[-1], 'wb')
+            localFile.write(webFile.read())
+            webFile.close()
+            localFile.close()
+            path = os.getcwd()+os.sep+localFile.name
+            return path
+        except Exception:
+            type,value,tb = sys.exc_info()
+            traceback.print_exception(type,value,tb)
+            traceback.print_tb(tb)
+            
 #uptime function from: http://thesmithfam.org/blog/2005/11/19/python-uptime-script/
 def uptime(total_seconds):
      # Helper vars:
