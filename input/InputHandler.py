@@ -90,6 +90,8 @@ class InputHandler:
             output = output+"get torrent:<torrent name> --> Info on the specified torrent \n"
             output = output+"download torrent:<url of torrent file> --> Downloads the specified torrent file and starts downloading it \n"
             output = output+"delete torrent:<torrent name> --> Removes the torrent, but does not delete the data \n"
+            sessionStats = client.sessionGet()
+            output = output + "\n Transmission Version: " + sessionStats['arguments']['version']
                        
         return output
                 
