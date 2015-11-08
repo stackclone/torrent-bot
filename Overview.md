@@ -1,0 +1,9 @@
+Torrent Bot is a jython script that lets you communicate with your transmission daemon remotely via IM.  Currently torrent bot only supports communication over the MSN chat network.  I want to eventually add support for Gtalk in the future, as well as potentially add support for the uTorrent client as well.
+
+Torrent bot is written in jython, which means that you need to have at least java installed on your machine.  I have been testing it against java6, but I am sure java 5 is fine too.  I wanted to do this in pure python, but had bad luck with the python MSN modules I tried, so I am using a java library (Java Messenger Library) and making use of the next best thing, jython.
+
+Torrent bot will automatically all incoming friend requests.  If this doesn't work for you try manually adding yourself to the bots MSN account.  See the usage page for steps on how to do this if you are unclear.
+
+Currently, Torrent Bot needs to be run on the same machine as your transmission daemon.  It shouldn't be too hard to extend support to communicating with remote daemon's probably by exposing a variable in the bot\_config.py.
+
+Finally, I have tested the code on gentoo linux and OS X, but should run on any nix.  Windows may be a wildcard, it should work, but if you want to use it on Windows, you'll probably want to whip up your own batch file to execute it all.
